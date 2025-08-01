@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+ </head>
+ <body>
+    
+ </body>
+ </html> 
+  
+ <!-- Wrap the wave circle inside a clickable link -->
+<a href="alarm.html" id="wave-button">
+  <div class="wave-circle">
+    <!-- Your SVG or flowing wave structure here -->
+
+
+    <svg width="200" height="200" viewBox="-110 -110 220 220" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Define mask using a circular shape -->
+  <defs>
+    <mask id="circleMask">
+      <rect x="-100" y="-100" width="200" height="200" fill="black" />
+      <circle r="100" fill="white" />
+    </mask>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle r="100" fill="lightcyan" />
+
+  <!-- Group of Animated Elements with Mask -->
+  <g mask="url(#circleMask)">
+
+    <!-- Background Water Wave -->
+    <path fill="lightskyblue"
+      d="M -200 -10 q 20 -15 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 v 100 h -400 z">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="80 0"
+        dur="4s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Floating Object -->
+    <g>
+    <path stroke="lightsalmon" fill="lightcoral"
+      d="M 19 10 h-38 l-12 -20h21l9 -12l11 13 h20 z">
+      <animateTransform
+  attributeName="transform"
+  attributeType="XML"
+  type="rotate"
+  values="-5;5;-5"
+  dur="4s"
+  repeatCount="indefinite"
+  keyTimes="0;0.5;1"
+  calcMode="spline"
+  keySplines=".42 0 .58 1; .42 0 .58 1"
+/>
+    </path>
+      <animateMotion dur="12s" repeatCount="indefinite"
+        path="M -160 0 q 20 -5 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0" />
+   
+    </g>
+
+    <!-- Front Water Wave -->
+    <path fill="royalblue"
+      d="M -200 0 q 20 -15 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 v 100 h -400 z">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-80 0"
+        dur="4s" repeatCount="indefinite" />
+    </path>
+  </g>
+    <circle stroke="skyblue" fill="none" stroke-width="15" r="100" fill="lightcyan" />
+
+</svg>
+
+    <!-- <img src="your_wave_image_or_svg.svg" alt="Go to Alarm" /> -->
+  </div>
+</a>
+
+  
+  
+ 

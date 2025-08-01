@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Alarm App</title>
+  <link rel="stylesheet" href="set-alarm.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Set an Alarm</h1>
+    <label for="alarm-time">Time:</label>
+    <input type="time" id="alarm-time">
+    <br>
+    <label for="photo-upload">Upload Photo (optional):</label>
+    <input type="file" id="photo-upload" accept="image/*">
+    <br>
+    <button onclick="setAlarm()">Set Alarm</button>
+
+    <h2>Alarms</h2>
+    <ul id="alarm-list"></ul>
+  </div>
+
+  <!-- Alarm Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p id="popup-time"></p>
+      <img id="popup-image" src="" alt="Alarm Image">
+      <p id="no-photo-msg" style="display: none;"></p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <audio id="alarm-sound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
+  <script src="medication.js"></script>
+</body>
+</html>
